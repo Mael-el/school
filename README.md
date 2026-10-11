@@ -303,7 +303,7 @@ The packaged app includes the built PWA (`npm run package`/`npm run make` build 
 
 ### Render deployment
 
-The `render.yaml` Blueprint provisions the web service and PostgreSQL database. Push the repository to GitHub, open the Blueprint in Render, and enter `WEB_ADMIN_USERNAME` and a unique `WEB_ADMIN_PASSWORD` of at least 12 characters when prompted. The service uses Render's HTTPS hostname for same-origin checks and exposes `/api/health` for health checks.
+The `render.yaml` Blueprint provisions the web service and PostgreSQL database, sets the initial login name to `admin`, and asks Render to generate a random `WEB_ADMIN_PASSWORD`. After changing an existing Blueprint, sync the Blueprint in Render and redeploy so the generated password is added to the service environment. If it is not populated by the sync, set `WEB_ADMIN_PASSWORD` in the service's Environment settings to a unique value of at least 12 characters. The service uses Render's HTTPS hostname for same-origin checks and exposes `/api/health` for health checks.
 
 This Blueprint intentionally uses Render's free plans for evaluation. The free PostgreSQL database expires after 30 days, and the free web service may spin down when idle; use paid plans before storing real school or financial data. PostgreSQL backups and restoration are managed through Render rather than the app's SQLite backup controls.
 

@@ -1,0 +1,264 @@
+{
+  "id": "emergence",
+  "label": "Complexe Scolaire Bilingue Émergence",
+  "description": "Profil de référence du Complexe Scolaire Bilingue Émergence de Ngaoundéré — identité, tarifs FR/EN, personnel, dépenses et données de démonstration.",
+  "settings": {
+    "school_name": "Complexe Scolaire Bilingue Émergence de Ngaoundéré",
+    "school_short_name": "Émergence Ngaoundéré",
+    "address": "Quartier Baladji II, Ngaoundéré, Région de l'Adamaoua, Cameroun",
+    "phone": "+237 6 94 49 78 20",
+    "email": "contact@emergence-ngaoundere.cm",
+    "director_name": "Direction Générale",
+    "receipt_prefix": "EMG",
+    "staff_receipt_prefix": "SAL",
+    "expense_reference_prefix": "DEP",
+    "receipt_message": "Merci pour votre confiance. / Thank you for your trust.",
+    "currency": "FCFA",
+    "current_school_year": "2026/2027",
+    "ministry_name": "Ministère de l'Éducation de Base",
+    "ministry_name_en": "Ministry of Basic Education",
+    "document_language_mode": "bilingual_fr_en",
+    "ui_language": "fr",
+    "receipt_paper_format": "A4",
+    "excel_export_enabled": "1",
+    "staff_salary_mode": "fixe",
+    "expense_approval_required": "1",
+    "expense_approver_name": "Hamadou Bello",
+    "backup_reminder_days": "7",
+    "auto_backup_enabled": "1",
+    "auto_backup_interval_days": "1",
+    "expense_budget_limit": "2500000",
+    "table_page_size": "50",
+    "country_name": "République du Cameroun",
+    "print_header_line": "République du Cameroun — Paix • Travail • Patrie"
+  },
+  "classLevels": [
+    {
+      "code": "PS",
+      "display_order": 1,
+      "fee": 182000,
+      "labels": { "francophone": "Petite Section", "anglophone": "Pre-Nursery" }
+    },
+    {
+      "code": "MS",
+      "display_order": 2,
+      "fee": 185000,
+      "labels": { "francophone": "Moyenne Section", "anglophone": "Nursery 1" }
+    },
+    {
+      "code": "GS",
+      "display_order": 3,
+      "fee": 188000,
+      "labels": { "francophone": "Grande Section", "anglophone": "Nursery 2" }
+    },
+    {
+      "code": "CP",
+      "display_order": 4,
+      "fee": 192000,
+      "labels": { "francophone": "CP", "anglophone": "Class 1" }
+    },
+    {
+      "code": "CE1",
+      "display_order": 5,
+      "fee": 198000,
+      "labels": { "francophone": "CE1", "anglophone": "Class 2" }
+    },
+    {
+      "code": "CE2",
+      "display_order": 6,
+      "fee": 205000,
+      "labels": { "francophone": "CE2", "anglophone": "Class 3" }
+    },
+    {
+      "code": "CM1",
+      "display_order": 7,
+      "fee": 215000,
+      "labels": { "francophone": "CM1", "anglophone": "Class 4" }
+    },
+    {
+      "code": "CM2",
+      "display_order": 8,
+      "fee": 225000,
+      "labels": { "francophone": "CM2", "anglophone": "Class 5" }
+    },
+    {
+      "code": "SIL",
+      "display_order": 9,
+      "fee": 190000,
+      "labels": { "francophone": "SIL" }
+    },
+    {
+      "code": "C6",
+      "display_order": 10,
+      "fee": 272000,
+      "labels": { "anglophone": "Class 6" }
+    }
+  ],
+  "paymentCategories": [
+    "Inscription",
+    "Scolarité",
+    "APE",
+    "Uniforme",
+    "Livres et fournitures",
+    "Examen",
+    "Informatique",
+    "Transport",
+    "Cantine",
+    "Autre"
+  ],
+  "cashiers": ["Mariam Fotso", "Jean-Baptiste Kamga"],
+  "expenseCategories": [
+    "Fournitures de bureau",
+    "Entretien et nettoyage",
+    "Électricité",
+    "Eau",
+    "Communication",
+    "Carburant",
+    "Réparations",
+    "Autre"
+  ],
+  "staff": [
+    {
+      "staff_no": "DIR-001",
+      "full_name": "Hamadou Bello",
+      "role": "Directeur",
+      "monthly_salary": 250000,
+      "phone": "699412870",
+      "hire_date": "2018-09-03",
+      "payments": [
+        { "pay_period": "2026-08", "payment_date": "2026-08-05", "amount": 250000 }
+      ]
+    },
+    {
+      "staff_no": "ENS-001",
+      "full_name": "Clarisse Ngo",
+      "role": "Enseignante (Francophone)",
+      "monthly_salary": 120000,
+      "phone": "677201145",
+      "hire_date": "2021-09-06",
+      "payments": [
+        { "pay_period": "2026-08", "payment_date": "2026-08-05", "amount": 120000 }
+      ]
+    },
+    {
+      "staff_no": "ENS-002",
+      "full_name": "James Ndikum",
+      "role": "Teacher (Anglophone)",
+      "monthly_salary": 120000,
+      "phone": "655883210",
+      "hire_date": "2020-09-07",
+      "payments": [
+        { "pay_period": "2026-08", "payment_date": "2026-08-05", "amount": 120000 }
+      ]
+    },
+    {
+      "staff_no": "ENS-003",
+      "full_name": "Marie Tchoumi",
+      "role": "Enseignante (Maternelle)",
+      "monthly_salary": 110000,
+      "phone": "690334478",
+      "hire_date": "2022-09-05",
+      "payments": [
+        { "pay_period": "2026-08", "payment_date": "2026-08-06", "amount": 110000 }
+      ]
+    },
+    {
+      "staff_no": "SEC-001",
+      "full_name": "Pauline Essomba",
+      "role": "Secrétaire",
+      "monthly_salary": 85000,
+      "phone": "698112256",
+      "hire_date": "2019-10-14",
+      "payments": [
+        { "pay_period": "2026-08", "payment_date": "2026-08-05", "amount": 85000 }
+      ]
+    },
+    {
+      "staff_no": "GAR-001",
+      "full_name": "Issa Mohamadou",
+      "role": "Gardien",
+      "monthly_salary": 60000,
+      "phone": "670998812",
+      "hire_date": "2023-01-09",
+      "payments": []
+    }
+  ],
+  "expenses": [
+    {
+      "expense_date": "2026-08-04",
+      "category": "Électricité",
+      "description": "Facture ENEO — août 2026",
+      "amount": 145000,
+      "payment_mode": "Orange Money",
+      "supplier_name": "ENEO Cameroun",
+      "receipt_ref": "ENEO-08-2026"
+    },
+    {
+      "expense_date": "2026-08-06",
+      "category": "Eau",
+      "description": "Facture Camwater — août 2026",
+      "amount": 38000,
+      "payment_mode": "Espèces",
+      "supplier_name": "Camwater"
+    },
+    {
+      "expense_date": "2026-08-08",
+      "category": "Fournitures de bureau",
+      "description": "Cahiers, craie et cartouches d'imprimante",
+      "amount": 72500,
+      "payment_mode": "Espèces",
+      "supplier_name": "Papeterie du Plateau"
+    },
+    {
+      "expense_date": "2026-08-12",
+      "category": "Entretien et nettoyage",
+      "description": "Produits d'entretien et savon pour les sanitaires",
+      "amount": 41000,
+      "payment_mode": "Espèces",
+      "supplier_name": "Marché central"
+    },
+    {
+      "expense_date": "2026-08-15",
+      "category": "Communication",
+      "description": "Crédit internet et appels du secrétariat",
+      "amount": 25000,
+      "payment_mode": "MTN Mobile Money",
+      "supplier_name": "MTN Cameroun"
+    },
+    {
+      "expense_date": "2026-08-18",
+      "category": "Carburant",
+      "description": "Carburant groupe électrogène",
+      "amount": 56000,
+      "payment_mode": "Espèces",
+      "supplier_name": "Station Total Baladji"
+    }
+  ],
+  "demo": {
+    "school_year": "2026/2027",
+    "students_per_class": 3,
+    "matricule_prefix": "EMG",
+    "neighborhoods": [
+      "Baladji",
+      "Dang",
+      "Joli-Soir",
+      "Sabongari",
+      "Mardock",
+      "Bamyanga",
+      "Burkina",
+      "Haoussa"
+    ],
+    "first_names_anglophone": [
+      "James",
+      "Blessing",
+      "Emmanuel",
+      "Faith",
+      "Collins",
+      "Grace",
+      "Daniel",
+      "Mercy",
+      "Samuel",
+      "Joy"
+    ]
+  }
+}

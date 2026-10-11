@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Single "glass over gradient" theme — this app never shows a plain white
+ * surface. Every token below is defined as an R G B triplet (optionally
+ * with a "/ alpha" suffix) so it can be consumed as `rgb(var(--token))`
+ * from tailwind.config.cjs. See docs/ui-style-guide.md for the full
+ * rationale and usage rules.
+ */
+@layer base {
+  :root {
+    color-scheme: dark;
+    --background: 28 11 48;
+    --foreground: 255 255 255;
+    --primary: 217 70 239;
+    --primary-foreground: 255 255 255;
+    --secondary: 255 255 255 / 0.08;
+    --secondary-foreground: 255 255 255;
+    --muted: 255 255 255 / 0.06;
+    --muted-foreground: 226 232 240 / 0.75;
+    --card: 255 255 255 / 0.07;
+    --card-foreground: 255 255 255;
+    --accent: 255 255 255 / 0.14;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 255 255 255 / 0.14;
+    --input: 255 255 255 / 0.14;
+    --ring: 217 70 239;
+  }
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  min-height: 100vh;
+  background-color: rgb(var(--background));
+}
+
+/* react-day-picker — glass / dark theme overrides (base CSS loaded in calendar.tsx) */
+.rdp-root {
+  --rdp-accent-color: rgb(var(--primary));
+  --rdp-accent-background-color: rgb(var(--primary) / 0.22);
+  --rdp-today-color: rgb(var(--primary));
+  --rdp-day-height: 2.25rem;
+  --rdp-day-width: 2.25rem;
+  --rdp-day_button-height: 2rem;
+  --rdp-day_button-width: 2rem;
+  --rdp-day_button-border-radius: 0.375rem;
+  --rdp-nav-height: 2.25rem;
+  --rdp-nav_button-height: 1.75rem;
+  --rdp-nav_button-width: 1.75rem;
+  color: rgb(var(--foreground));
+}
+
+.rdp-root .rdp-weekday {
+  color: rgb(var(--muted-foreground));
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.rdp-root .rdp-month_caption {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.rdp-root .rdp-button_next,
+.rdp-root .rdp-button_previous {
+  border-radius: 0.375rem;
+  border: 1px solid rgb(var(--input));
+  color: rgb(var(--foreground));
+}
+
+.rdp-root .rdp-chevron {
+  fill: currentColor;
+}
+
+.rdp-root .rdp-day_button:hover:not([disabled]) {
+  background-color: rgb(var(--accent));
+}
+
+.rdp-root .rdp-selected .rdp-day_button {
+  background-color: rgb(var(--primary));
+  color: rgb(var(--primary-foreground));
+  border-color: rgb(var(--primary));
+}
+
+.rdp-root .rdp-selected .rdp-day_button:hover {
+  background-color: rgb(var(--primary) / 0.9);
+}
+
+.rdp-root .rdp-today:not(.rdp-selected) .rdp-day_button {
+  background-color: rgb(var(--accent));
+  color: rgb(var(--accent-foreground));
+  font-weight: 600;
+}
+
+.rdp-root .rdp-outside {
+  opacity: 0.45;
+}
+
+.rdp-root .rdp-disabled {
+  opacity: 0.35;
+}
+
+/* Desktop form controls */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  opacity: 0.65;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(var(--foreground));
+  box-shadow: 0 0 0 1000px rgb(255 255 255 / 0.1) inset;
+  caret-color: rgb(var(--foreground));
+  transition: background-color 9999s ease-out;
+}
+
+/* intl-tel-input — match desktop glass fields, Cameroon-first dropdown */
+.iti {
+  width: 100%;
+  --iti-border-color: rgb(255 255 255 / 0.15);
+  --iti-hover-color: rgb(255 255 255 / 0.12);
+  --iti-dialcode-color: rgb(255 255 255 / 0.7);
+  --iti-dropdown-bg: rgb(32 14 56);
+  --iti-arrow-color: rgb(255 255 255 / 0.7);
+  --iti-search-bg: rgb(255 255 255 / 0.08);
+  --iti-spacer-color: rgb(255 255 255 / 0.12);
+}
+
+.iti--inline-dropdown {
+  width: 100%;
+}
+
+.iti__dropdown-content {
+  z-index: 10000;
+  color: rgb(var(--foreground));
+  border-color: rgb(255 255 255 / 0.18);
+}
+
+.iti-phone-field {
+  padding-left: 0.65rem;
+}

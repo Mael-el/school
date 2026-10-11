@@ -1,0 +1,1109 @@
+{
+  "nav": {
+    "ariaLabel": "Navigation principale",
+    "dashboard": "Accueil",
+    "students": "Élèves",
+    "enrollments": "Inscriptions",
+    "payments": "Paiements",
+    "expenses": "Dépenses",
+    "staff": "Personnel",
+    "report": "Rapport élève",
+    "financialReports": "Finances",
+    "settings": "Paramètres",
+    "help": "Aide",
+    "groups": {
+      "school": "Scolarité",
+      "finance": "Finances",
+      "admin": "Gestion"
+    },
+    "descriptions": {
+      "dashboard": "Vue d'ensemble des inscriptions, encaissements et alertes.",
+      "students": "Fiches élèves — identité, coordonnées et suivi des soldes.",
+      "enrollments": "Gestion des inscriptions — classes, numéros et listes.",
+      "payments": "Enregistrer les frais de scolarité et imprimer les reçus.",
+      "expenses": "Suivre les dépenses et exporter en PDF ou Excel.",
+      "staff": "Annuaire du personnel, salaires et bulletins de paie.",
+      "report": "Relevé individuel de l'élève pour l'année en cours.",
+      "financialReports": "Recettes, dépenses et soldes par période.",
+      "settings": "Identité de l'école, tarifs, options et sauvegardes.",
+      "help": "Guide pas à pas pour configurer l'école et utiliser chaque écran."
+    }
+  },
+  "shell": {
+    "schoolYear": "Année scolaire",
+    "schoolYearPlaceholder": "2026/2027",
+    "language": "Langue de l'interface",
+    "fallbackSchoolName": "Mon établissement scolaire",
+    "fallbackShortName": "Suivi Frais Scolaires",
+    "staleMainProcess": "Processus principal obsolète — relancez l'application (npm run restart dans app/)."
+  },
+  "common": {
+    "dash": "—",
+    "loading": "Chargement…",
+    "ellipsis": "…",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "create": "Créer",
+    "add": "Ajouter",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteConfirm": "Confirmer la suppression",
+    "confirmTitle": "Confirmation requise",
+    "continue": "Continuer",
+    "deleted": "Supprimé.",
+    "back": "Retour",
+    "details": "Détails",
+    "search": "Recherche",
+    "refresh": "Actualiser",
+    "generate": "Générer",
+    "generateFailed": "Impossible de générer le numéro.",
+    "searchSelect": "Rechercher…",
+    "print": "Imprimer",
+    "refreshTitle": "Actualiser les données",
+    "selectPlaceholder": "— Sélectionner —",
+    "selectStudent": "— Sélectionner un élève —",
+    "all": "Toutes",
+    "allMasc": "Tous",
+    "exportPdf": "Export PDF",
+    "exportExcel": "Exporter le tableur",
+    "excelExportDisabled": "Export Excel désactivé dans les paramètres",
+    "saved": "Enregistré ✓",
+    "fcfa": "FCFA",
+    "clear": "Effacer",
+    "previousYear": "Année précédente",
+    "nextYear": "Année suivante",
+    "reactivate": "Réactiver",
+    "showInactive": "Afficher les inactifs",
+    "cancelReasonColumn": "Motif d'annulation"
+  },
+  "ui": {
+    "pagination": {
+      "range": "{{from}}–{{to}} sur {{total}}",
+      "pageOf": "{{page}} / {{pages}}",
+      "previous": "Page précédente",
+      "next": "Page suivante",
+      "pageSize": "Lignes par page"
+    },
+    "table": {
+      "sort": "Trier",
+      "sortedAsc": "Tri croissant",
+      "sortedDesc": "Tri décroissant"
+    },
+    "cancelDialog": {
+      "confirm": "Confirmer l'annulation",
+      "placeholder": "Motif de l'annulation…",
+      "requiredError": "Le motif est obligatoire."
+    }
+  },
+  "status": {
+    "paymentBalance": {
+      "paid": "Payé",
+      "partial": "Paiement partiel",
+      "unpaid": "Non payé",
+      "overpaid": "Trop-perçu"
+    },
+    "transaction": {
+      "validated": "Validé"
+    }
+  },
+  "enum": {
+    "gender": {
+      "female": "Fille",
+      "male": "Garçon"
+    },
+    "section": {
+      "francophone": "Francophone",
+      "anglophone": "Anglophone"
+    },
+    "paymentMode": {
+      "cash": "Espèces",
+      "mtn": "MTN Mobile Money",
+      "orange": "Orange Money",
+      "transfer": "Virement bancaire",
+      "cheque": "Chèque"
+    },
+    "term": {
+      "first": "1er trimestre",
+      "second": "2e trimestre",
+      "third": "3e trimestre"
+    },
+    "staffPaymentType": {
+      "salary": "Salaire",
+      "advance": "Avance",
+      "bonus": "Prime",
+      "other": "Autre"
+    },
+    "enrollmentStatus": {
+      "active": "Actif",
+      "transferred": "Transféré",
+      "withdrawn": "Retiré"
+    }
+  },
+  "months": {
+    "abbr": [
+      "Jan",
+      "Fév",
+      "Mar",
+      "Avr",
+      "Mai",
+      "Juin",
+      "Juil",
+      "Août",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Déc"
+    ]
+  },
+  "search": {
+    "placeholder": "Élève… (Ctrl+K)",
+    "ariaLabel": "Recherche globale d'élève"
+  },
+  "dashboard": {
+    "schoolYearTitle": "Année scolaire {{year}}",
+    "welcome": "Bienvenue ! Voici la situation de l'école",
+    "treasuryGlobal": "Trésorerie globale",
+    "quickActions": "Raccourcis rapides",
+    "newStudent": "Nouvel élève",
+    "newPayment": "Nouveau paiement",
+    "alertsTitle": "Alertes",
+    "sections": {
+      "year": "Situation de l'année",
+      "analytics": "Analyses et tendances"
+    },
+    "panels": {
+      "overdueTitle": "Retards de paiement",
+      "overdueSubtitle": "Plus gros soldes restants de l'année",
+      "overdueEmpty": "Aucun retard de paiement",
+      "overduePaidOf": "payé : {{paid}}",
+      "recentTitle": "Derniers paiements",
+      "recentSubtitle": "Encaissements les plus récents",
+      "recentEmpty": "Aucun paiement enregistré pour le moment",
+      "seeAll": "Voir tout"
+    },
+    "cards": {
+      "students": "Élèves",
+      "studentsEnrolled": "Élèves inscrits",
+      "studentsHint": "Inscrits — année {{year}}",
+      "enrollments": "Inscriptions",
+      "enrollmentsHint": "Année {{year}}",
+      "payments": "Paiements",
+      "paymentsHint": "Total encaissé",
+      "collected": "Total encaissé",
+      "collectedOf": "sur {{total}} attendus",
+      "outstanding": "Reste à recouvrer",
+      "outstandingHint": "{{count}} élève(s) avec un solde",
+      "revenue": "Recettes",
+      "revenueHint": "Frais de scolarité encaissés",
+      "paymentStatus": "Situation des paiements",
+      "allPaid": "Tout est payé",
+      "remainingBalance": "Solde restant",
+      "expenses": "Dépenses",
+      "expensesHint": "Total dépensé",
+      "staff": "Salaires",
+      "staffHint": "Total versé au personnel",
+      "netBalance": "Solde net",
+      "netBalanceHint": "Recettes − dépenses − salaires",
+      "recoveryRate": "Taux de recouvrement",
+      "recoveryHint": "Part des frais attendus déjà encaissés",
+      "recoveryYoY": "Année précédente : {{prior}} % ({{delta}} pts)"
+    },
+    "alerts": {
+      "unpaidStaff": "{{count}} membre(s) du personnel n'ont pas reçu leur salaire pour {{period}}.",
+      "expenseBudget": "Budget dépenses dépassé ce mois : {{total}} / {{limit}}."
+    },
+    "loadingSchoolYear": "Chargement de l'année scolaire…",
+    "loadError": "Impossible de charger le tableau de bord : {{error}}",
+    "backupLast": "Dernière sauvegarde le {{date}}.",
+    "backupNone": "Aucune sauvegarde effectuée pour le moment.",
+    "backupReminder": "Pensez à sauvegarder la base hors du poste (voir Paramètres › Options avancées).",
+    "noSchoolYear": "Aucune année scolaire configurée. Sélectionnez une année en haut de l'écran ou exécutez `npm run seed:fixtures -- --reset`."
+  },
+  "students": {
+    "searchPlaceholder": "Rechercher par nom ou matricule…",
+    "addStudent": "Ajouter un élève",
+    "editStudent": "Modifier l'élève",
+    "register": "Inscrire l'élève",
+    "registered": "Élève inscrit avec succès.",
+    "matricule": "Matricule *",
+    "matriculeHint": "Généré automatiquement à partir du dernier numéro — vous pouvez le modifier.",
+    "fullName": "Nom et prénom *",
+    "gender": "Sexe",
+    "birthDate": "Date de naissance",
+    "guardian": "Parent / Tuteur",
+    "phone": "Téléphone",
+    "neighborhood": "Quartier",
+    "identitySection": "Identité",
+    "identitySectionHelp": "Coordonnées de l'élève et du tuteur.",
+    "enrollmentSection": "Inscription — {{year}}",
+    "enrollmentSectionHelp": "La classe détermine le tarif annuel enregistré à l'inscription.",
+    "feePreview": {
+      "title": "Frais de scolarité",
+      "amountLabel": "Montant annuel",
+      "selectClass": "Choisissez une section et une classe pour prévisualiser le tarif annuel.",
+      "noFee": "Aucun tarif n'est défini pour cette classe. Configurez-le dans Paramètres › Tarifs par classe.",
+      "recorded": "Ce montant sera enregistré comme frais prévus à l'inscription.",
+      "classLine": "{{className}} · {{section}} · {{year}}"
+    },
+    "needSchoolYear": "Veuillez saisir une année scolaire en haut de l'écran.",
+    "enrollmentRequired": "La classe est obligatoire pour inscrire un nouvel élève.",
+    "requiredError": "Le matricule et le nom complet sont obligatoires.",
+    "updated": "Élève mis à jour.",
+    "created": "Élève ajouté avec succès.",
+    "empty": "Aucun élève trouvé.",
+    "emptyYear": "Aucun élève inscrit pour cette année.",
+    "emptyFiltered": "Aucun élève ne correspond à ces filtres.",
+    "listSummary": {
+      "title": "Suivi des soldes",
+      "hint": "Vue orientée élève : qui doit encore payer cette année.",
+      "enrolled": "Élèves affichés",
+      "withBalance": "Avec solde dû",
+      "totalOutstanding": "Total des soldes"
+    },
+    "pageIntro": {
+      "title": "Registre des élèves",
+      "description": "Consultez la fiche de chaque élève (identité, tuteur, historique), modifiez ses informations ou créez un nouvel élève avec son inscription pour l'année en cours."
+    },
+    "filters": {
+      "allClasses": "Toutes les classes",
+      "allSections": "Toutes les sections",
+      "allStatuses": "Toutes les situations"
+    },
+    "columns": {
+      "matricule": "Matricule",
+      "fullName": "Nom et prénom",
+      "gender": "Sexe",
+      "guardian": "Parent / Tuteur",
+      "phone": "Téléphone",
+      "class": "Classe",
+      "section": "Section",
+      "balance": "Solde",
+      "status": "Situation"
+    },
+    "archive": "Archiver",
+    "archiveTitle": "Archiver cet élève ?",
+    "archiveDescription": "{{name}} sera retiré de la liste active. Son historique d'inscriptions et de paiements est conservé.",
+    "archiveConfirm": "Archiver",
+    "archived": "Élève archivé.",
+    "reactivated": "Élève réactivé.",
+    "reactivateTitle": "Réactiver cet élève ?",
+    "reactivateDescription": "{{name}} réapparaîtra dans les listes actives.",
+    "reactivateConfirm": "Réactiver",
+    "archivedBadge": "Archivé",
+    "showInactive": "Inclure archivés / inactifs",
+    "deleteTitle": "Supprimer cet élève ?",
+    "deleteDescription": "{{name}} sera définitivement supprimé(e), ainsi que toutes ses inscriptions et tous ses paiements. Cette action est irréversible.",
+    "deleteConfirm": "Supprimer définitivement",
+    "deleted": "Élève supprimé."
+  },
+  "studentDetail": {
+    "noEnrollments": "Aucune inscription pour cet élève.",
+    "yearLine": "Année {{year}}",
+    "enrollmentHint": "Frais prévus et encaissements pour cette année.",
+    "expectedFee": "Frais prévus:",
+    "statusLine": "— Statut:",
+    "printStatement": "Imprimer le relevé (PDF)",
+    "printStatementAria": "Imprimer le relevé de l'élève",
+    "statementGenerated": "Relevé généré",
+    "noPayments": "Aucun paiement pour cette inscription.",
+    "columns": {
+      "receipt": "Reçu",
+      "date": "Date",
+      "amount": "Montant",
+      "mode": "Mode",
+      "status": "Statut"
+    },
+    "cancelReason": "Motif de l'annulation :",
+    "paymentCancelled": "Paiement annulé.",
+    "deleteTitle": "Supprimer cet élève ?",
+    "deleteDescription": "{{name}} sera définitivement supprimé(e), ainsi que toutes ses inscriptions et tous ses paiements. Cette action est irréversible.",
+    "deleteConfirm": "Supprimer définitivement",
+    "deleted": "Élève supprimé."
+  },
+  "enrollments": {
+    "needSchoolYear": "Veuillez saisir une année scolaire en haut de l'écran.",
+    "title": "Inscriptions pour l'année {{year}}",
+    "newEnrollment": "Nouvelle inscription",
+    "editEnrollment": "Modifier l'inscription",
+    "createEnrollment": "Créer l'inscription",
+    "created": "Inscription créée.",
+    "updated": "Inscription mise à jour.",
+    "student": "Élève *",
+    "class": "Classe *",
+    "section": "Section",
+    "registrationNo": "N° inscription",
+    "registrationNoHint": "Généré à partir du dernier numéro — vous pouvez le modifier.",
+    "registrationDate": "Date d'inscription",
+    "enrollmentStatus": "Statut de l'inscription",
+    "requiredError": "L'élève, la classe et l'année scolaire sont obligatoires.",
+    "empty": "Aucune inscription pour cette année.",
+    "emptyFiltered": "Aucune inscription ne correspond à ces filtres.",
+    "searchPlaceholder": "Rechercher par nom, matricule ou n° d'inscription…",
+    "filters": {
+      "class": "Classe",
+      "section": "Section",
+      "status": "Situation",
+      "allClasses": "Toutes les classes",
+      "allSections": "Toutes les sections",
+      "allStatuses": "Toutes les situations"
+    },
+    "listSummary": {
+      "title": "Synthèse de l'année",
+      "hint": "Totaux financiers pour les inscriptions affichées."
+    },
+    "pageIntro": {
+      "title": "Inscriptions scolaires",
+      "description": "Gérez les inscriptions par classe et section : numéros d'inscription, frais prévus, encaissements, retraits et impression des listes de classe."
+    },
+    "printRoster": "Liste de classe",
+    "rosterPreview": "Aperçu — liste de classe",
+    "rosterSaved": "Liste de classe enregistrée.",
+    "rosterAllClasses": "Toutes les classes",
+    "rosterClassFilter": "Filtrer par classe",
+    "columns": {
+      "matricule": "Matricule",
+      "fullName": "Nom et prénom",
+      "class": "Classe",
+      "section": "Section",
+      "registrationNo": "N° inscription",
+      "expectedFee": "Frais prévus",
+      "totalPaid": "Total payé",
+      "balance": "Solde",
+      "situation": "Situation",
+      "enrollmentStatus": "Statut inscription"
+    },
+    "reactivated": "Inscription réactivée.",
+    "withdraw": "Retirer",
+    "withdrawTitle": "Retirer cette inscription ?",
+    "withdrawDescription": "{{name}} sera retiré(e) des listes actives pour cette année.",
+    "withdrawConfirm": "Retirer",
+    "withdrawn": "Inscription retirée.",
+    "showInactive": "Inclure inscriptions inactives",
+    "deleteTitle": "Supprimer cette inscription ?",
+    "deleteDescription": "L'inscription de {{name}} pour cette année sera supprimée, ainsi que tous les paiements associés. Cette action est irréversible.",
+    "deleteConfirm": "Supprimer définitivement",
+    "deleted": "Inscription supprimée."
+  },
+  "payments": {
+    "pageIntro": {
+      "title": "Encaissements des frais scolaires",
+      "description": "Recherchez un élève, enregistrez un paiement et imprimez le reçu. Les paiements annulés restent visibles avec leur motif."
+    },
+    "needSchoolYear": "Veuillez saisir une année scolaire en haut de l'écran.",
+    "enrollmentSection": "Élève / inscription",
+    "enrollmentSectionHelp": "Sélectionnez l'élève pour voir le tarif, les montants déjà payés et le solde.",
+    "detailsSection": "Détails du paiement",
+    "detailsSectionHelp": "Montant, trimestre et mode d'encaissement.",
+    "preview": {
+      "title": "Situation de l'élève",
+      "selectStudent": "Choisissez un élève pour prévisualiser le tarif et le solde restant.",
+      "balance": "Solde",
+      "hint": "Le solde est ce qui reste après les reçus validés."
+    },
+    "enrollment": "Élève / inscription *",
+    "date": "Date *",
+    "category": "Catégorie",
+    "term": "Trimestre",
+    "installmentNo": "Versement n°",
+    "amount": "Montant payé *",
+    "paymentMode": "Mode de paiement",
+    "transactionRef": "Référence transaction",
+    "cashier": "Caissier / Caissière",
+    "note": "Observation",
+    "enrollmentOption": "{{name}} ({{matricule}}) — solde: {{balance}}",
+    "balanceSummary": "Frais prévus: {{fee}} — Déjà payé: {{paid}} — Solde: {{balance}}",
+    "requiredError": "L'inscription, la date et le montant sont obligatoires.",
+    "amountError": "Le montant doit être un nombre positif.",
+    "saved": "Paiement enregistré — reçu {{receipt}}",
+    "addPayment": "Enregistrer un paiement",
+    "cancelReason": "Motif de l'annulation :",
+    "receiptGenerated": "Reçu généré",
+    "submit": "Enregistrer le paiement",
+    "printReceipt": "Imprimer le reçu (PDF)",
+    "printReceiptAria": "Imprimer le reçu",
+    "selectStudentHint": "Sélectionnez un élève pour voir ses paiements.",
+    "searchPlaceholder": "Rechercher un paiement (reçu, date, montant)…",
+    "columns": {
+      "receipt": "Reçu",
+      "date": "Date",
+      "amount": "Montant",
+      "mode": "Mode",
+      "status": "Statut"
+    },
+    "deleteTitle": "Supprimer ce paiement ?",
+    "deleteDescription": "Le reçu {{receipt}} sera définitivement supprimé. Préférez « Annuler » pour conserver une trace comptable.",
+    "deleteConfirm": "Supprimer définitivement",
+    "deleted": "Paiement supprimé."
+  },
+  "expenses": {
+    "pageIntro": {
+      "title": "Registre des dépenses",
+      "description": "Suivez les sorties de caisse par catégorie et par période, exportez le registre en PDF ou Excel."
+    },
+    "formSection": "Nouvelle dépense",
+    "formSectionHelp": "Date, catégorie et montant de la sortie de caisse.",
+    "amountPreviewLabel": "Montant",
+    "amountPreviewHint": "Ce montant sera enregistré comme sortie de caisse.",
+    "totalsTitle": "Total des dépenses",
+    "totalsHint": "Somme des dépenses validées pour les filtres sélectionnés.",
+    "grandTotalLabel": "Total validé",
+    "uncategorized": "Sans catégorie",
+    "paymentSection": "Règlement",
+    "paymentSectionHelp": "Fournisseur, pièce justificative et approbation si requise.",
+    "date": "Date *",
+    "category": "Catégorie",
+    "amount": "Montant *",
+    "description": "Description *",
+    "paymentMode": "Mode de paiement",
+    "vendor": "Fournisseur",
+    "attachmentRef": "Réf. pièce jointe",
+    "approvedBy": "Approuvé par",
+    "approverRequired": "Approbateur *",
+    "approvalRequiredError": "Le nom de l'approbateur est obligatoire (voir Paramètres › Options avancées).",
+    "note": "Observation",
+    "requiredError": "La date, la description et le montant sont obligatoires.",
+    "amountError": "Le montant doit être un nombre positif.",
+    "saved": "Dépense enregistrée — {{reference}}",
+    "updated": "Dépense mise à jour — {{reference}}",
+    "editExpenseTitle": "Modifier la dépense {{reference}}",
+    "addExpense": "Nouvelle dépense",
+    "savedInline": "Dépense enregistrée — référence {{reference}}",
+    "submit": "Enregistrer la dépense",
+    "addCategory": "Ajouter catégorie",
+    "newCategoryPlaceholder": "Nouvelle catégorie",
+    "filterFrom": "Du",
+    "filterTo": "Au",
+    "filterCategory": "Catégorie",
+    "filterMode": "Mode de paiement",
+    "dateFromPlaceholder": "Date de début",
+    "dateToPlaceholder": "Date de fin",
+    "categoryTotal": "{{category}}: {{total}}",
+    "grandTotal": "Total: {{total}}",
+    "registerGenerated": "Registre des dépenses généré",
+    "cancelReason": "Motif de l'annulation :",
+    "empty": "Aucune dépense enregistrée pour ces filtres.",
+    "searchPlaceholder": "Rechercher une dépense (référence, description, fournisseur)…",
+    "columns": {
+      "reference": "Référence",
+      "date": "Date",
+      "description": "Description",
+      "amount": "Montant",
+      "mode": "Mode",
+      "status": "Statut"
+    },
+    "deleteTitle": "Supprimer cette dépense ?",
+    "deleteDescription": "La dépense {{reference}} sera définitivement supprimée. Préférez « Annuler » pour conserver une trace comptable.",
+    "deleteConfirm": "Supprimer définitivement",
+    "deleted": "Dépense supprimée."
+  },
+  "staff": {
+    "pageIntro": {
+      "title": "Gestion du personnel",
+      "description": "Fiches du personnel, paiements de salaires avec reçus, et suivi mensuel des soldes."
+    },
+    "memberFormSection": "Nouveau membre du personnel",
+    "memberFormSectionHelp": "Identité, rôle et salaire de référence.",
+    "paymentFormSection": "Nouveau paiement de salaire",
+    "paymentFormSectionHelp": "Montant versé pour la période sélectionnée.",
+    "preview": {
+      "title": "Fiche personnel",
+      "selectEmployee": "Choisissez un membre du personnel pour prévisualiser le salaire de référence.",
+      "salary": "Salaire mensuel",
+      "hint": "Montant de référence ; le paiement enregistré peut différer."
+    },
+    "tabs": {
+      "members": "Personnel",
+      "payments": "Paiements de salaire",
+      "monthly": "Salaires du mois"
+    },
+    "addMember": "Ajouter un membre du personnel",
+    "addPayment": "Enregistrer un paiement de salaire",
+    "matricule": "Matricule *",
+    "matriculeHint": "Généré automatiquement à partir du dernier numéro — vous pouvez le modifier.",
+    "fullName": "Nom complet *",
+    "role": "Rôle *",
+    "phone": "Téléphone",
+    "hireDate": "Date d'embauche",
+    "monthlySalary": "Salaire mensuel *",
+    "monthlySalaryOptional": "Salaire mensuel (référence)",
+    "variableSalaryHint": "Mode salaire variable : le salaire mensuel est indicatif ; seuls les montants versés sont suivis.",
+    "employee": "Employé(e) *",
+    "date": "Date *",
+    "period": "Période *",
+    "amount": "Montant *",
+    "type": "Type",
+    "paymentMode": "Mode de paiement",
+    "cashier": "Caissier / Caissière",
+    "transactionRef": "Référence transaction",
+    "note": "Observation",
+    "month": "Mois",
+    "memberRequiredErrorFixed": "Le matricule, le nom, le rôle et le salaire mensuel sont obligatoires.",
+    "memberRequiredError": "Le matricule, le nom et le rôle sont obligatoires.",
+    "salaryError": "Le salaire mensuel doit être un nombre positif.",
+    "paymentRequiredError": "L'employé, la date, la période et le montant sont obligatoires.",
+    "amountError": "Le montant doit être un nombre positif.",
+    "memberAdded": "Membre du personnel ajouté.",
+    "memberUpdated": "Fiche du personnel mise à jour.",
+    "editMemberTitle": "Modifier — {{name}}",
+    "paymentSaved": "Paiement enregistré — reçu {{receipt}}",
+    "paymentSavedInline": "Paiement enregistré — reçu {{receipt}}",
+    "cancelReason": "Motif de l'annulation :",
+    "salaryReceiptGenerated": "Reçu salaire généré",
+    "submitPayment": "Enregistrer le paiement",
+    "printReceipt": "Imprimer le reçu (PDF)",
+    "printReceiptAria": "Imprimer le reçu",
+    "emptyMembers": "Aucun membre du personnel enregistré.",
+    "searchMembersPlaceholder": "Rechercher un membre (nom, matricule, rôle)…",
+    "searchPaymentsPlaceholder": "Rechercher un paiement (reçu, période, montant)…",
+    "searchMonthlyPlaceholder": "Rechercher un membre (nom, matricule, rôle)…",
+    "emptyFiltered": "Aucun résultat pour cette recherche.",
+    "deactivate": "Sortie",
+    "deactivateTitle": "Confirmer la sortie ?",
+    "deactivateDescription": "{{name}} sera marqué(e) comme sorti(e) du personnel actif.",
+    "deactivateConfirm": "Confirmer la sortie",
+    "deactivated": "Membre du personnel archivé.",
+    "reactivated": "Membre du personnel réactivé.",
+    "reactivate": "Réactiver",
+    "reactivateTitle": "Réactiver ce membre ?",
+    "reactivateDescription": "{{name}} sera de nouveau actif dans la liste du personnel.",
+    "reactivateConfirm": "Réactiver",
+    "deleteMemberTitle": "Supprimer ce membre ?",
+    "deleteMemberDescription": "{{name}} sera définitivement supprimé(e), ainsi que tous ses paiements de salaire. Cette action est irréversible.",
+    "deleteMemberConfirm": "Supprimer définitivement",
+    "memberDeleted": "Membre du personnel supprimé.",
+    "deletePaymentTitle": "Supprimer ce paiement de salaire ?",
+    "deletePaymentDescription": "Le reçu {{receipt}} sera définitivement supprimé. Préférez « Annuler » pour conserver une trace comptable.",
+    "deletePaymentConfirm": "Supprimer définitivement",
+    "paymentDeleted": "Paiement supprimé.",
+    "selectEmployeeHint": "Sélectionnez un employé pour voir ses paiements.",
+    "emptyMonthly": "Aucun membre du personnel actif.",
+    "memberColumns": {
+      "matricule": "Matricule",
+      "name": "Nom",
+      "role": "Rôle",
+      "monthlySalary": "Salaire mensuel",
+      "status": "Statut"
+    },
+    "paymentColumns": {
+      "receipt": "Reçu",
+      "date": "Date",
+      "period": "Période",
+      "type": "Type",
+      "amount": "Montant",
+      "status": "Statut"
+    },
+    "monthlyColumns": {
+      "matricule": "Matricule",
+      "name": "Nom",
+      "role": "Rôle",
+      "monthlySalary": "Salaire mensuel",
+      "paid": "Payé",
+      "balance": "Solde"
+    }
+  },
+  "report": {
+    "pageIntro": {
+      "title": "Rapport détaillé par élève",
+      "description": "Situation financière complète d'un élève : frais attendus, paiements enregistrés et solde restant, imprimable en relevé."
+    },
+    "needSchoolYear": "Veuillez saisir une année scolaire en haut de l'écran.",
+    "fallbackSchool": "l'école",
+    "student": "Élève",
+    "studentSummary": "Matricule {{matricule}} — Année {{year}}",
+    "expectedFee": "Frais prévus",
+    "totalPaid": "Total payé",
+    "remainingBalance": "Solde restant",
+    "generating": "Génération…",
+    "printPdf": "Imprimer / PDF",
+    "statementGenerated": "Relevé généré",
+    "noPayments": "Aucun paiement enregistré pour cet élève.",
+    "paymentHistory": "Historique des paiements",
+    "paymentCount": "{{count}} paiement(s) enregistré(s)",
+    "selectStudentTitle": "Sélectionnez un élève",
+    "selectStudentHint": "Choisissez un élève inscrit pour l'année en cours afin d'afficher son relevé et son historique de paiements.",
+    "searchPayments": "Rechercher un reçu, une date ou un montant…",
+    "noSearchResults": "Aucun paiement ne correspond à votre recherche.",
+    "columns": {
+      "receipt": "Reçu",
+      "date": "Date",
+      "amount": "Montant",
+      "mode": "Mode",
+      "status": "Statut"
+    }
+  },
+  "financialReports": {
+    "pageIntro": {
+      "title": "Trésorerie et rapports financiers",
+      "description": "Vue consolidée des recettes, dépenses et salaires par mois, avec export PDF et Excel."
+    },
+    "filterFrom": "Du (mois)",
+    "filterTo": "Au (mois)",
+    "monthFromPlaceholder": "Mois de début",
+    "monthToPlaceholder": "Mois de fin",
+    "income": "Recettes:",
+    "expenses": "Dépenses:",
+    "salaries": "Salaires:",
+    "netBalance": "Solde net:",
+    "reportGenerated": "Rapport financier généré",
+    "empty": "Aucune donnée pour cette période.",
+    "columns": {
+      "month": "Mois",
+      "income": "Recettes",
+      "expenses": "Dépenses",
+      "salaries": "Salaires",
+      "netBalance": "Solde net"
+    }
+  },
+  "settings": {
+    "tabs": {
+      "general": "Infos école",
+      "fees": "Tarifs par classe",
+      "reference": "Catégories & caissiers",
+      "advanced": "Options avancées",
+      "closeout": "Clôture d'année",
+      "cleanup": "Vider les données"
+    },
+    "descriptions": {
+      "general": "Identité, contacts, documents et logo de l'établissement.",
+      "fees": "Listes de classes et tarifs annuels, séparés par section.",
+      "reference": "Catégories de paiement et liste des caissiers.",
+      "advanced": "Règles de fonctionnement, documents et sauvegarde.",
+      "closeout": "Reprendre les tarifs et inscriptions dans une nouvelle année.",
+      "cleanup": "Charger des données de démonstration, ou vider élèves, paiements et réglages au choix.",
+      "identity": "Nom officiel, coordonnées et direction.",
+      "documents": "Préfixes des reçus et devise affichée.",
+      "logo": "Image utilisée dans l'application et sur les documents imprimés."
+    },
+    "general": {
+      "title": "Informations de l'école",
+      "identitySection": "Identité de l'établissement",
+      "documentsSection": "Documents et reçus",
+      "logoSection": "Logo",
+      "logoPreviewAlt": "Aperçu du logo de l'école",
+      "logoPreviewUnavailable": "Logo enregistré — aperçu indisponible",
+      "schoolName": "Nom de l'école",
+      "schoolShortName": "Nom court",
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "directorName": "Nom du directeur / directrice",
+      "ministryName": "Ministère de tutelle (FR)",
+      "ministryNameEn": "Ministère de tutelle (EN)",
+      "countryName": "Pays (en-tête documents)",
+      "printHeaderLine": "Ligne d'en-tête imprimée",
+      "receiptPrefix": "Préfixe des reçus (élèves)",
+      "staffReceiptPrefix": "Préfixe des reçus salaires",
+      "expenseReferencePrefix": "Préfixe des références dépenses",
+      "receiptMessage": "Message sur le reçu",
+      "currency": "Devise",
+      "pickLogo": "Choisir le logo"
+    },
+    "fees": {
+      "title": "Structure scolaire et tarifs",
+      "sectionHelp": "Chaque section a sa propre liste de classes et de tarifs. Les noms ne sont pas des traductions mais des classes distinctes.",
+      "francophoneSectionTitle": "Section francophone",
+      "anglophoneSectionTitle": "Section anglophone",
+      "schoolYear": "Année scolaire",
+      "newCode": "Code niveau",
+      "newCodePlaceholder": "Ex: PS",
+      "addClass": "Ajouter un niveau",
+      "codeColumn": "Code",
+      "classColumn": "Classe",
+      "feeColumn": "Tarif annuel ({{year}})",
+      "deleteClassConfirm": "Supprimer la classe « {{name}} » ? Cette action est irréversible.",
+      "deleted": "Classe supprimée",
+      "newClass": "Nom de la classe",
+      "newClassPlaceholder": "Ex: CM2",
+      "addClassTitle": "Ajouter une classe",
+      "addClassRequired": "Indiquez le code et le nom de la classe.",
+      "classAdded": "Classe ajoutée",
+      "classUpdated": "Classe mise à jour",
+      "feeSaved": "Tarif enregistré",
+      "yearRequired": "Indiquez l'année scolaire pour enregistrer un tarif.",
+      "emptySection": "Aucune classe dans cette section."
+    },
+    "reference": {
+      "categoriesTitle": "Catégories de paiement",
+      "cashiersTitle": "Caissiers",
+      "categoryPlaceholder": "Ex: Cantine",
+      "cashierPlaceholder": "Nom du caissier",
+      "deleteCategoryConfirm": "Supprimer la catégorie « {{name}} » ?",
+      "deleteCashierConfirm": "Supprimer le caissier « {{name}} » ?",
+      "expenseCategoriesTitle": "Catégories de dépenses",
+      "emptyExpenseCategories": "Aucune catégorie de dépense pour le moment.",
+      "expenseCategoryPlaceholder": "Ex: Fournitures",
+      "deleteExpenseCategoryConfirm": "Supprimer la catégorie « {{name}} » ?",
+      "deleted": "Élément supprimé",
+      "added": "Élément ajouté",
+      "updated": "Élément mis à jour",
+      "nameRequired": "Indiquez un nom.",
+      "emptyCategories": "Aucune catégorie pour le moment.",
+      "emptyCashiers": "Aucun caissier pour le moment.",
+      "nameColumn": "Nom"
+    },
+    "advanced": {
+      "title": "Options avancées",
+      "groups": {
+        "display": "Affichage",
+        "staff": "Personnel",
+        "expenses": "Dépenses",
+        "documents": "Documents",
+        "backup": "Sauvegarde automatique"
+      },
+      "tablePageSize": "Lignes par page (tableaux)",
+      "staffSalaryMode": "Mode de salaire du personnel",
+      "expenseApproval": "Validation des dépenses avant paiement",
+      "expenseApprover": "Nom du/des approbateur(s)",
+      "receiptFormat": "Format des reçus",
+      "excelExport": "Export Excel/CSV activé",
+      "documentLanguage": "Langue des documents imprimés",
+      "backupReminder": "Rappel de sauvegarde (jours)",
+      "salaryFixed": "Fixe",
+      "salaryVariable": "Variable",
+      "no": "Non",
+      "yes": "Oui",
+      "formatA4": "A4",
+      "formatTicket": "Ticket",
+      "docFrOnly": "Français uniquement",
+      "docEnOnly": "Anglais uniquement",
+      "docBilingual": "Bilingue FR/EN",
+      "autoBackup": "Sauvegarde automatique locale",
+      "autoBackupInterval": "Intervalle sauvegarde auto (jours)",
+      "expenseBudgetLimit": "Plafond budget dépenses (mois, FCFA)"
+    },
+    "backup": {
+      "title": "Sauvegarde",
+      "help": "Copie manuelle vers un emplacement externe (clé USB, cloud…). Une sauvegarde automatique locale peut aussi être activée ci-dessus (dossier backups dans les données de l'application, 7 copies conservées).",
+      "lastBackup": "Dernière sauvegarde manuelle : {{datetime}}",
+      "lastAutoBackup": "Dernière sauvegarde auto : {{datetime}} (tous les {{days}} jours)",
+      "autoEnabled": "Sauvegarde auto activée (tous les {{days}} jours)",
+      "none": "Aucune sauvegarde effectuée pour le moment.",
+      "reminder": "— rappel : sauvegardez au moins tous les {{days}} jours.",
+      "saveNow": "Sauvegarder maintenant",
+      "saving": "Sauvegarde en cours…",
+      "saved": "Sauvegarde enregistrée.",
+      "restore": "Restaurer une sauvegarde…",
+      "restoring": "Restauration…",
+      "restoreConfirm": "Restaurer remplacera toutes les données actuelles par la sauvegarde choisie. L'application va redémarrer. Continuer ?"
+    },
+    "diagnostic": {
+      "title": "Diagnostic",
+      "help": "Journal des erreurs techniques de l'application. Utile pour le support en cas de problème.",
+      "openFolder": "Ouvrir le dossier des journaux",
+      "downloadLogs": "Télécharger les journaux",
+      "empty": "Aucune erreur enregistrée pour le moment."
+    },
+    "closeout": {
+      "title": "Clôture / ouverture d'année scolaire",
+      "help": "Préparez la nouvelle année scolaire en copiant les tarifs et en réinscrivant les élèves actifs. Les données des années passées ne sont jamais modifiées.",
+      "fromYear": "Année source",
+      "toYear": "Année cible",
+      "toYearPlaceholder": "2027/2028",
+      "yearsRequired": "Veuillez indiquer l'année source et l'année cible.",
+      "sameYear": "L'année source et l'année cible doivent être différentes.",
+      "confirm": "Clôturer {{from}} → {{to}} ?\n\n• Copie des tarifs vers la nouvelle année\n• Réinscription des élèves actifs (même classe/section)\n\nLes inscriptions existantes dans l'année cible ne seront pas écrasées.",
+      "run": "Lancer la clôture",
+      "running": "Clôture en cours…",
+      "successTitle": "Clôture terminée",
+      "successFees": "{{copied}} tarif(s) copié(s), {{skipped}} déjà présent(s)",
+      "successEnrollments": "{{created}} inscription(s) créée(s), {{skipped}} ignorée(s)",
+      "stepFeesTitle": "1. Copier les tarifs",
+      "stepFeesBody": "Reprend les tarifs par classe et section de l'année source vers l'année cible, sans écraser ceux déjà définis.",
+      "stepEnrollmentsTitle": "2. Réinscrire les élèves actifs",
+      "stepEnrollmentsBody": "Crée une inscription dans l'année cible pour chaque élève actif de l'année source (même classe et section), s'il n'y est pas déjà inscrit.",
+      "knownYears": "Années connues dans la base",
+      "suggested": "suggérée"
+    },
+    "cleanup": {
+      "title": "Vider les données",
+      "help": "Cochez uniquement ce que vous voulez supprimer. Les éléments non cochés restent en place.",
+      "sectionOperations": "Données métier",
+      "sectionConfig": "Configuration de l'école",
+      "selectAll": "Tout sélectionner",
+      "selectNone": "Tout désélectionner",
+      "count": "{{count}} enregistrement(s)",
+      "implied": "Sera aussi vidé à cause d'une autre sélection.",
+      "noneSelected": "Sélectionnez au moins un type de données à supprimer.",
+      "confirmTitle": "Supprimer les données sélectionnées ?",
+      "confirm": "Cette action est irréversible.\n\n{{summary}}",
+      "confirmAction": "Supprimer définitivement",
+      "run": "Vider la sélection",
+      "running": "Suppression en cours…",
+      "successTitle": "Données vidées",
+      "successItem": "{{label}} : {{count}} supprimé(s)",
+      "fixturesTitle": "Charger des données de démonstration",
+      "fixturesHelp": "Remplit l'application avec des classes, élèves, paiements, dépenses et personnel d'exemple, pour tester toutes les fonctions — y compris depuis un installateur .exe.",
+      "fixturesProfileLabel": "Jeu de données",
+      "fixturesProfiles": {
+        "demo": "Démo générique (8 classes, 2 élèves par section)",
+        "emergence": "École Émergence — Ngaoundéré (10 classes, tarifs réels, 3 élèves par section)"
+      },
+      "fixturesKeepTitle": "Conserver l'identité et les options actuelles",
+      "fixturesKeepHelp": "Garde le nom de l'école, le logo, l'année, les préfixes et les options avancées. Seules les données métier de démo sont chargées.",
+      "fixturesConfirmTitle": "Charger les données de démonstration ?",
+      "fixturesConfirmKeep": "Les élèves, inscriptions, paiements, dépenses et le personnel existants seront remplacés par un jeu d'exemple. L'identité de l'école et les options avancées sont conservées.",
+      "fixturesConfirmReplace": "Toutes les données métier seront remplacées, et l'identité de l'école prendra les valeurs de démonstration (École de démonstration).",
+      "fixturesAction": "Charger les données de démonstration",
+      "fixturesRunning": "Chargement en cours…",
+      "fixturesSuccess": "Démonstration chargée : {{students}} élève(s), {{payments}} paiement(s).",
+      "groups": {
+        "payments": "Paiements des élèves",
+        "expenses": "Dépenses",
+        "staffPayments": "Paiements de salaires",
+        "enrollments": "Inscriptions",
+        "students": "Fiches élèves",
+        "staff": "Personnel",
+        "audit": "Journal d'audit",
+        "schoolIdentity": "Nom de l'école et logo",
+        "schoolYear": "Année scolaire",
+        "classes": "Classes",
+        "fees": "Tarifs par classe",
+        "paymentCategories": "Catégories de paiement",
+        "expenseCategories": "Catégories de dépenses",
+        "cashiers": "Caissiers",
+        "advancedOptions": "Options avancées"
+      },
+      "hints": {
+        "payments": "Reçus de scolarité. La numérotation des prochains reçus reprend à 0001.",
+        "expenses": "Dépenses enregistrées. Les catégories de dépenses sont conservées, sauf si vous les cochez aussi.",
+        "staffPayments": "Salaires, avances et primes versés. Les fiches du personnel restent.",
+        "enrollments": "Inscriptions de l'année. Inclut automatiquement les paiements liés.",
+        "students": "Fiches élèves. Inclut automatiquement les inscriptions et les paiements.",
+        "staff": "Membres du personnel. Inclut automatiquement les paiements de salaire.",
+        "audit": "Historique technique des créations, modifications et annulations.",
+        "schoolIdentity": "Nom, logo, adresse, téléphone, e-mail, direction et en-têtes des documents. Remis aux valeurs par défaut.",
+        "schoolYear": "Année scolaire courante. Remise à l'année calculée automatiquement.",
+        "classes": "Niveaux et libellés. Inclut les tarifs et les inscriptions liées.",
+        "fees": "Tarifs annuels par classe et section.",
+        "paymentCategories": "Rubriques utilisées sur les reçus (ex. Scolarité). Les paiements existants perdent juste la rubrique.",
+        "expenseCategories": "Rubriques de dépenses. Les dépenses existantes perdent juste la rubrique.",
+        "cashiers": "Liste des caissiers. Les opérations existantes ne sont pas supprimées.",
+        "advancedOptions": "Préfixes de reçus, langue des documents, format papier, sauvegarde automatique, etc. Remis aux valeurs par défaut."
+      }
+    }
+  },
+  "print": {
+    "savePdf": "Enregistrer en PDF"
+  },
+  "overdueReminders": {
+    "title": "Élèves en retard de paiement ({{count}})",
+    "columns": {
+      "student": "Élève",
+      "class": "Classe",
+      "balance": "Solde",
+      "guardian": "Tuteur"
+    },
+    "message": "Bonjour {{guardian}}, un solde de {{balance}} FCFA reste dû pour {{studentName}} ({{className}}) au {{schoolName}}. Merci de bien vouloir régulariser dans les meilleurs délais.",
+    "defaultGuardian": "Cher parent/tuteur",
+    "copied": "Message de rappel copié.",
+    "copyFailed": "Impossible de copier le message.",
+    "whatsappFailed": "Impossible d'ouvrir WhatsApp."
+  },
+  "charts": {
+    "classBalances": {
+      "title": "Encaissements et soldes par classe",
+      "subtitle": "Montant encaissé vs. reste à payer, par classe",
+      "collected": "Encaissé",
+      "remaining": "Reste à payer",
+      "empty": "Aucune inscription pour cette année scolaire."
+    },
+    "paymentStatus": {
+      "title": "Situation des paiements",
+      "subtitle": "Répartition des inscriptions par statut de paiement",
+      "empty": "Aucune inscription pour cette année scolaire."
+    },
+    "monthlyCollections": {
+      "title": "Évolution mensuelle des encaissements",
+      "subtitle": "Total encaissé par mois, sur l'année scolaire en cours",
+      "collected": "Encaissé",
+      "empty": "Aucun paiement enregistré pour cette année scolaire."
+    },
+    "treasury": {
+      "title": "Trésorerie consolidée",
+      "subtitle": "Recettes, dépenses et salaires par mois",
+      "income": "Recettes",
+      "expenses": "Dépenses",
+      "salaries": "Salaires",
+      "empty": "Aucune donnée de trésorerie pour cette période."
+    }
+  },
+  "datePicker": {
+    "pickDate": "Choisir une date",
+    "pickMonth": "Choisir un mois"
+  },
+  "help": {
+    "introTitle": "Comment utiliser l'application",
+    "introDescription": "Suivez les guides ci-dessous dans l'ordre pour configurer l'école, inscrire les élèves, encaisser les frais et imprimer les documents.",
+    "guideLabel": "Guide",
+    "tip": "L'année scolaire en haut à droite s'applique aux élèves, inscriptions, paiements et rapports. Vérifiez-la avant d'enregistrer une opération.",
+    "sections": {
+      "start": {
+        "tab": "Démarrage",
+        "title": "Configurer l'école pour la première fois",
+        "description": "Sans ces réglages, les inscriptions et les reçus ne peuvent pas être générés correctement.",
+        "action": "Ouvrir les paramètres",
+        "stepCount": 5,
+        "steps": [
+          {
+            "title": "Renseigner l'identité de l'école",
+            "body": "Dans Paramètres › Infos école, saisissez le nom, l'adresse, le téléphone, l'e-mail et le nom du directeur. Ces informations apparaissent sur tous les PDF."
+          },
+          {
+            "title": "Ajouter le logo",
+            "body": "Toujours dans Infos école, importez le logo. Il s'affiche dans la barre latérale, sur l'accueil et sur les documents imprimés."
+          },
+          {
+            "title": "Choisir l'année scolaire",
+            "body": "Sélectionnez l'année en cours dans le sélecteur en haut à droite (par exemple 2026/2027). Toutes les listes sont filtrées sur cette année."
+          },
+          {
+            "title": "Créer les classes et les tarifs",
+            "body": "Dans Paramètres › Tarifs par classe, ajoutez les niveaux (CP, CE1…) pour chaque section, puis saisissez le tarif annuel. C'est ce montant qui sera proposé à l'inscription."
+          },
+          {
+            "title": "Préparer les catégories et les caissiers",
+            "body": "Dans Paramètres › Catégories & caissiers, créez les catégories de paiement et de dépenses, ainsi que les caissiers qui valideront les encaissements."
+          }
+        ]
+      },
+      "students": {
+        "tab": "Élèves",
+        "title": "Inscrire un élève",
+        "description": "L'inscription crée à la fois la fiche de l'élève et son dossier pour l'année en cours.",
+        "action": "Aller aux élèves",
+        "stepCount": 4,
+        "steps": [
+          {
+            "title": "Ouvrir le formulaire",
+            "body": "Dans Élèves, cliquez sur « Ajouter un élève ». Le matricule est proposé automatiquement ; vous pouvez le modifier avant d'enregistrer."
+          },
+          {
+            "title": "Saisir l'identité et le tuteur",
+            "body": "Renseignez le nom, le sexe, la date de naissance, le quartier, puis le parent ou tuteur avec son téléphone. Ces contacts servent aussi aux relances."
+          },
+          {
+            "title": "Choisir la section et la classe",
+            "body": "Sélectionnez Francophone ou Anglophone, puis la classe. Le tarif annuel s'affiche en aperçu s'il a été configuré dans les paramètres."
+          },
+          {
+            "title": "Enregistrer",
+            "body": "Validez le formulaire. L'élève apparaît dans la liste et dans Inscriptions, avec un solde égal aux frais prévus."
+          }
+        ]
+      },
+      "payments": {
+        "tab": "Paiements",
+        "title": "Encaisser un paiement et imprimer le reçu",
+        "description": "Chaque paiement validé met à jour le solde de l'élève et peut être imprimé immédiatement.",
+        "action": "Aller aux paiements",
+        "stepCount": 4,
+        "steps": [
+          {
+            "title": "Sélectionner l'élève",
+            "body": "Dans Paiements, choisissez l'élève dans le filtre. Vous pouvez aussi partir de sa fiche (Élèves › Détails) ou utiliser la recherche globale en haut (Ctrl+K)."
+          },
+          {
+            "title": "Saisir le versement",
+            "body": "Cliquez sur « Nouveau paiement », puis indiquez la date, le montant, le mode (espèces, mobile money…), le trimestre si besoin et le caissier."
+          },
+          {
+            "title": "Contrôler le solde",
+            "body": "L'aperçu affiche le reste dû. Après enregistrement, le tableau de bord et le relevé de l'élève se mettent à jour."
+          },
+          {
+            "title": "Imprimer le reçu",
+            "body": "Utilisez l'action d'impression sur la ligne du paiement. Le PDF bilingue contient le montant en lettres, le solde restant et les signatures."
+          }
+        ]
+      },
+      "expenses": {
+        "tab": "Dépenses",
+        "title": "Enregistrer une dépense",
+        "description": "Les dépenses validées sont déduites de la trésorerie globale visible sur l'accueil et dans Finances.",
+        "action": "Aller aux dépenses",
+        "stepCount": 3,
+        "steps": [
+          {
+            "title": "Créer la dépense",
+            "body": "Dans Dépenses, cliquez sur « Nouvelle dépense ». Saisissez la date, la catégorie, la description, le fournisseur, le mode et le montant."
+          },
+          {
+            "title": "Modifier si nécessaire",
+            "body": "Tant que la dépense est validée, le crayon permet de corriger la description ou le montant. Les dépenses annulées ne peuvent plus être modifiées."
+          },
+          {
+            "title": "Exporter le registre",
+            "body": "Filtrez par période ou catégorie, puis exportez en PDF ou Excel pour la comptabilité."
+          }
+        ]
+      },
+      "staff": {
+        "tab": "Personnel",
+        "title": "Gérer le personnel et les salaires",
+        "description": "L'annuaire du personnel et les paiements de salaire sont regroupés dans le même écran.",
+        "action": "Aller au personnel",
+        "stepCount": 3,
+        "steps": [
+          {
+            "title": "Ajouter un membre",
+            "body": "Dans Personnel, créez la fiche : numéro, nom, rôle et salaire mensuel. Le numéro est généré automatiquement."
+          },
+          {
+            "title": "Enregistrer un salaire",
+            "body": "Ouvrez l'onglet des paiements, choisissez le mois, le type (salaire, avance…) et le montant. Un reçu de salaire peut être imprimé."
+          },
+          {
+            "title": "Suivre les impayés",
+            "body": "L'accueil signale les membres non payés pour le mois en cours. Vous pouvez aussi désactiver un membre sans perdre son historique."
+          }
+        ]
+      },
+      "reports": {
+        "tab": "Rapports",
+        "title": "Consulter et imprimer les rapports",
+        "description": "Les documents officiels (relevé, liste de classe, rapport financier) se génèrent depuis les écrans correspondants.",
+        "action": "Ouvrir le rapport élève",
+        "stepCount": 4,
+        "steps": [
+          {
+            "title": "Relevé d'un élève",
+            "body": "Dans Rapport élève, sélectionnez l'élève. Vous obtenez l'historique des versements, le solde et un PDF à imprimer ou à envoyer au tuteur."
+          },
+          {
+            "title": "Relancer les retards",
+            "body": "La même page liste les soldes impayés. Un message de relance est préparé ; vous pouvez le copier pour WhatsApp ou SMS."
+          },
+          {
+            "title": "Liste de classe",
+            "body": "Depuis Inscriptions, exportez la liste de classe en PDF : matricules, noms, montants payés et soldes."
+          },
+          {
+            "title": "Rapport financier",
+            "body": "Dans Finances, filtrez la période puis imprimez le rapport consolidé (recettes, dépenses, salaires, solde net)."
+          }
+        ]
+      },
+      "backup": {
+        "tab": "Sauvegarde",
+        "title": "Protéger les données",
+        "description": "La base est locale. Une sauvegarde régulière hors du poste évite toute perte en cas de panne.",
+        "action": "Ouvrir les options avancées",
+        "stepCount": 3,
+        "steps": [
+          {
+            "title": "Sauvegarder maintenant",
+            "body": "Dans Paramètres › Options avancées, cliquez sur « Sauvegarder maintenant ». Choisissez un dossier (clé USB, disque externe, cloud)."
+          },
+          {
+            "title": "Activer le rappel",
+            "body": "Configurez l'intervalle de rappel. L'accueil affiche une alerte lorsque la dernière sauvegarde est trop ancienne."
+          },
+          {
+            "title": "Restaurer si besoin",
+            "body": "La restauration remplace la base actuelle. Faites-la uniquement à partir d'une sauvegarde saine, puis relancez l'application."
+          }
+        ]
+      }
+    }
+  }
+}

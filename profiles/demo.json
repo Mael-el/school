@@ -1,0 +1,133 @@
+{
+  "id": "demo",
+  "label": "Données de démonstration (générique)",
+  "description": "Classes francophones synthétiques et élèves de test — aucune marque d'école spécifique.",
+  "settings": {
+    "school_name": "École de démonstration",
+    "school_short_name": "Suivi Frais Scolaires",
+    "address": "123 Avenue de l'Éducation",
+    "phone": "+237 600 00 00 00",
+    "email": "contact@ecole-demo.example",
+    "director_name": "Directeur(trice) Demo",
+    "receipt_prefix": "REC",
+    "staff_receipt_prefix": "SAL",
+    "expense_reference_prefix": "DEP",
+    "receipt_message": "Merci pour votre confiance.",
+    "currency": "FCFA",
+    "current_school_year": "2026/2027",
+    "ministry_name": "Ministère de l'Éducation de Base",
+    "ministry_name_en": "Ministry of Basic Education",
+    "document_language_mode": "bilingual_fr_en",
+    "ui_language": "fr",
+    "receipt_paper_format": "A4",
+    "excel_export_enabled": "1",
+    "staff_salary_mode": "fixe",
+    "expense_approval_required": "0",
+    "expense_approver_name": "Directeur(trice) Demo",
+    "backup_reminder_days": "7",
+    "auto_backup_enabled": "0",
+    "auto_backup_interval_days": "1",
+    "expense_budget_limit": "1500000",
+    "table_page_size": "50",
+    "country_name": "République du Cameroun",
+    "print_header_line": "République du Cameroun — Paix • Travail • Patrie"
+  },
+  "classLevels": [
+    {
+      "code": "PS",
+      "display_order": 1,
+      "fee": 120000,
+      "labels": { "francophone": "Petite Section", "anglophone": "Pre-Nursery" }
+    },
+    {
+      "code": "MS",
+      "display_order": 2,
+      "fee": 125000,
+      "labels": { "francophone": "Moyenne Section", "anglophone": "Nursery 1" }
+    },
+    {
+      "code": "GS",
+      "display_order": 3,
+      "fee": 130000,
+      "labels": { "francophone": "Grande Section", "anglophone": "Nursery 2" }
+    },
+    {
+      "code": "CP",
+      "display_order": 4,
+      "fee": 140000,
+      "labels": { "francophone": "CP", "anglophone": "Class 1" }
+    },
+    {
+      "code": "CE1",
+      "display_order": 5,
+      "fee": 145000,
+      "labels": { "francophone": "CE1", "anglophone": "Class 2" }
+    },
+    {
+      "code": "CE2",
+      "display_order": 6,
+      "fee": 150000,
+      "labels": { "francophone": "CE2", "anglophone": "Class 3" }
+    },
+    {
+      "code": "CM1",
+      "display_order": 7,
+      "fee": 160000,
+      "labels": { "francophone": "CM1", "anglophone": "Class 4" }
+    },
+    {
+      "code": "CM2",
+      "display_order": 8,
+      "fee": 170000,
+      "labels": { "francophone": "CM2", "anglophone": "Class 5" }
+    }
+  ],
+  "paymentCategories": ["Scolarité", "Inscription", "Cantine"],
+  "cashiers": ["Caissier A", "Caissier B"],
+  "expenseCategories": [
+    "Fournitures de bureau",
+    "Électricité",
+    "Entretien et nettoyage"
+  ],
+  "staff": [
+    {
+      "staff_no": "DIR-001",
+      "full_name": "Directeur(trice) Demo",
+      "role": "Directeur",
+      "monthly_salary": 180000,
+      "hire_date": "2020-09-01",
+      "payments": [
+        { "pay_period": "2026-08", "payment_date": "2026-08-05", "amount": 180000 }
+      ]
+    },
+    {
+      "staff_no": "ENS-001",
+      "full_name": "Enseignant Demo",
+      "role": "Enseignant",
+      "monthly_salary": 90000,
+      "hire_date": "2022-09-01",
+      "payments": []
+    }
+  ],
+  "expenses": [
+    {
+      "expense_date": "2026-08-10",
+      "category": "Électricité",
+      "description": "Facture électricité de démonstration",
+      "amount": 80000,
+      "payment_mode": "Espèces"
+    },
+    {
+      "expense_date": "2026-08-14",
+      "category": "Fournitures de bureau",
+      "description": "Cahiers et stylos",
+      "amount": 25000,
+      "payment_mode": "Espèces"
+    }
+  ],
+  "demo": {
+    "school_year": "2026/2027",
+    "students_per_class": 2,
+    "matricule_prefix": "ELV"
+  }
+}

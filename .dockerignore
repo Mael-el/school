@@ -1,0 +1,11 @@
+.git
+.vite
+node_modules
+dist
+out
+coverage
+playwright-report
+test-results
+.env
+.env.*
+*.log

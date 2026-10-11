@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "Suivi des frais scolaires",
+  "short_name": "Frais scolaires",
+  "description": "Gestion des élèves, frais scolaires et trésorerie.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1f3047",
+  "icons": [
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

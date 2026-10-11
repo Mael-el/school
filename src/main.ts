@@ -178,7 +178,13 @@ async function bootstrap(): Promise<void> {
   registerIpcHandlers(db, ipcRuntime());
 
   if (process.env.WEB_SERVER === '1') {
-    await startWebServer(database);
+    const closeWebServer = await startWebServer(database, {
+      userDataPath: app.getPath('userData'),
+      webRoot: app.isPackaged
+        ? path.join(process.resourcesPath, 'dist', 'web')
+        : path.resolve(process.cwd(), 'dist/web'),
+    });
+    app.once('before-quit', closeWebServer);
     return;
   }
 

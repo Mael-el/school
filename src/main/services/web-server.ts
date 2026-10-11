@@ -11,8 +11,6 @@ import {
 } from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { app } from 'electron';
-import Database from 'better-sqlite3';
 import type { Kysely } from 'kysely';
 import { SettingsService } from './SettingsService';
 import { BackupService } from './BackupService';
@@ -28,6 +26,11 @@ interface WebUser {
 
 interface Session extends WebUser {
   expiresAt: number;
+}
+
+export interface WebServerOptions {
+  userDataPath?: string;
+  webRoot?: string;
 }
 
 const SESSION_COOKIE = 'school_fees_session';
@@ -361,7 +364,10 @@ async function serveStatic(
   return true;
 }
 
-export async function startWebServer(database: AppDatabase): Promise<void> {
+export async function startWebServer(
+  database: AppDatabase,
+  options: WebServerOptions = {},
+): Promise<() => void> {
   const host = process.env.WEB_HOST ?? '127.0.0.1';
   const port = Number(process.env.PORT ?? process.env.WEB_PORT ?? 4173);
   const secureCookie = process.env.WEB_COOKIE_SECURE === '1';
@@ -392,10 +398,10 @@ export async function startWebServer(database: AppDatabase): Promise<void> {
     console.info('[web] Initial administrator account created.');
   }
 
-  const webRoot = app.isPackaged
-    ? path.join(process.resourcesPath, 'dist', 'web')
-    : path.resolve(process.cwd(), 'dist/web');
-  const userData = app.getPath('userData');
+  const webRoot = options.webRoot ?? path.resolve(process.cwd(), 'dist/web');
+  const userData =
+    options.userDataPath ??
+    path.resolve(process.env.WEB_USER_DATA_DIR ?? 'user-data');
   const settings = new SettingsService(database.db);
   const backupService = database.sqlite
     ? new BackupService(
@@ -713,6 +719,10 @@ export async function startWebServer(database: AppDatabase): Promise<void> {
           );
           await fs.mkdir(path.dirname(restorePath), { recursive: true });
           await fs.writeFile(restorePath, contents);
+          const [{ default: Database }, { app }] = await Promise.all([
+            import('better-sqlite3'),
+            import('electron'),
+          ]);
           const validationDb = new Database(restorePath, {
             readonly: true,
             fileMustExist: true,
@@ -846,9 +856,9 @@ export async function startWebServer(database: AppDatabase): Promise<void> {
         60 * 60 * 1000,
       )
     : null;
-  app.on('before-quit', () => {
+  return () => {
     if (automaticBackupTimer) clearInterval(automaticBackupTimer);
     for (const token of sessions.keys()) sessions.delete(token);
     server.close();
-  });
+  };
 }

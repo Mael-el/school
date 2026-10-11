@@ -20,7 +20,7 @@ services:
       - key: WEB_ADMIN_USERNAME
         value: admin
       - key: WEB_ADMIN_PASSWORD
-        generateValue: true
+        sync: false
 
 databases:
   - name: school-fees-db

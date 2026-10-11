@@ -78,12 +78,7 @@ function passwordHash(password: string, salt: string): Buffer {
   return scryptSync(password, salt, 64, { maxmem: 64 * 1024 * 1024 });
 }
 
-async function createUser(
-  db: Kysely<Schema>,
-  username: string,
-  password: string,
-  role: 'admin' | 'staff',
-): Promise<WebUser> {
+function validateCredentials(username: string, password: string): string {
   const normalized = username.trim().toLowerCase();
   if (!/^[a-z0-9._-]{3,40}$/.test(normalized)) {
     throw new Error(
@@ -91,13 +86,23 @@ async function createUser(
     );
   }
   if (
-    password.length < 12 ||
+    password.length < 8 ||
     Buffer.byteLength(password, 'utf8') > PASSWORD_BYTES
   ) {
     throw new Error(
-      'Le mot de passe doit contenir au moins 12 caractères et au maximum 64 octets.',
+      'Le mot de passe doit contenir au moins 8 caractères et au maximum 64 octets.',
     );
   }
+  return normalized;
+}
+
+async function createUser(
+  db: Kysely<Schema>,
+  username: string,
+  password: string,
+  role: 'admin' | 'staff',
+): Promise<WebUser> {
+  const normalized = validateCredentials(username, password);
 
   const salt = randomBytes(16).toString('hex');
   const digest = passwordHash(password, salt);
@@ -114,6 +119,36 @@ async function createUser(
     .executeTakeFirstOrThrow();
 
   return { id: Number(result.id), username: normalized, role };
+}
+
+async function resetAdminPassword(
+  db: Kysely<Schema>,
+  username: string,
+  password: string,
+): Promise<void> {
+  const normalized = validateCredentials(username, password);
+  const admin = await db
+    .selectFrom('web_users')
+    .select('id')
+    .where('username', '=', normalized)
+    .where('role', '=', 'admin')
+    .where('disabled', '=', 0)
+    .executeTakeFirst();
+  if (!admin) {
+    throw new Error(
+      `Aucun compte administrateur actif nommé « ${normalized} » à réinitialiser.`,
+    );
+  }
+
+  const salt = randomBytes(16).toString('hex');
+  await db
+    .updateTable('web_users')
+    .set({
+      password_hash: passwordHash(password, salt).toString('hex'),
+      password_salt: salt,
+    })
+    .where('id', '=', admin.id)
+    .execute();
 }
 
 function userFromRow(row: Record<string, unknown>): WebUser {
@@ -396,6 +431,16 @@ export async function startWebServer(
     }
     await createUser(database.db, username, password, 'admin');
     console.info('[web] Initial administrator account created.');
+  } else if (process.env.WEB_ADMIN_RESET_PASSWORD === '1') {
+    const username = process.env.WEB_ADMIN_USERNAME ?? 'admin';
+    const password = process.env.WEB_ADMIN_PASSWORD;
+    if (!password) {
+      throw new Error(
+        'WEB_ADMIN_PASSWORD est requis pour réinitialiser le compte administrateur.',
+      );
+    }
+    await resetAdminPassword(database.db, username, password);
+    console.info('[web] Administrator password reset from environment.');
   }
 
   const webRoot = options.webRoot ?? path.resolve(process.cwd(), 'dist/web');

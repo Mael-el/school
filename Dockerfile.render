@@ -18,6 +18,7 @@ RUN apt-get update \
     libxshmfence1 \
     libxss1 \
     libxtst6 \
+    tini \
     xvfb \
     xauth \
   && rm -rf /var/lib/apt/lists/*
@@ -26,6 +27,7 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm ci --include=dev \
+  && ./node_modules/.bin/install-electron \
   && chown -R node:node node_modules \
   && chown node:node /app
 
@@ -35,4 +37,4 @@ USER node
 
 RUN npm run web:build
 
-CMD ["xvfb-run", "-a", "./node_modules/.bin/electron-forge", "start", "--", "--no-sandbox"]
+CMD ["tini", "--", "xvfb-run", "-a", "./node_modules/.bin/electron-forge", "start", "--", "--no-sandbox"]

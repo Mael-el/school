@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [pluginElectronRestart('main')],
   build: {
     rollupOptions: {
-      // better-sqlite3 ships a native .node binding that can't be bundled
-      // by Rollup — keep it as a real require() at runtime instead.
-      external: ['better-sqlite3'],
+      // Native modules and pg's circular CommonJS exports must remain runtime
+      // dependencies rather than being bundled by Rollup.
+      external: ['better-sqlite3', 'pg'],
     },
   },
 });
